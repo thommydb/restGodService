@@ -15,7 +15,7 @@ public class GodController {
 		this.godService = godService;
 	}
 
-	@GetMapping("/greeting")
+	@GetMapping("/god")
 	public List<String> getGod(@RequestParam(value = "nationality", defaultValue = "World") String nationality) {
 		return godService.getGod(nationality);
 	}
