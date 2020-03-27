@@ -5,6 +5,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
@@ -34,7 +35,7 @@ public class RestGodServiceApplicationTests {
 	@MockBean
 	private GodService godService;
 	
-	@BeforeAll
+	@BeforeEach
 	public void setUp() {
 		mockMvc = MockMvcBuilders.standaloneSetup(godController).build();
 	}
