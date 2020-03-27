@@ -40,7 +40,7 @@ public class RestGodServiceApplicationTests {
 	
 	@Test
 	public void whenValidInputGreek_thenReturns200() throws Exception {
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/greek")
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/gods?nationality=greek")
 				.accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON);
 		
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
@@ -51,7 +51,7 @@ public class RestGodServiceApplicationTests {
 	
 	@Test
 	public void whenValidInputRoman_thenReturns200() throws Exception {
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/roman")
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/gods?nationality=roman")
 				.accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON);
 		
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
@@ -62,7 +62,7 @@ public class RestGodServiceApplicationTests {
 	
 	@Test
 	public void whenValidInputNordic_Returns200() throws Exception {
-		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/nordic")
+		RequestBuilder requestBuilder = MockMvcRequestBuilders.get("/gods?nationality=nordic")
 				.accept(MediaType.APPLICATION_JSON).contentType(MediaType.APPLICATION_JSON);
 		
 		MvcResult result = mockMvc.perform(requestBuilder).andReturn();
